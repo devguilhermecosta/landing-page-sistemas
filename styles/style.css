@@ -166,6 +166,21 @@ main {
 }
 
 @media screen and (min-width: 992px) {
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu {
+        display: inline-block;
+        width: 100vw;
+        height: auto;
+        background-color: transparent;
+    }
+
+    .menu a {
+        display: inline-block;
+    }
+
     .title-header {
         max-width: 600px;
         padding-top: 50px;
@@ -182,7 +197,8 @@ main {
 
     .title-device {
         font-size: 30px;
-        width: 500px;
+        width: 470px;
+        margin-left: -50px;
     }
 
     .display {
