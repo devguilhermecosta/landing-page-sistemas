@@ -1,5 +1,5 @@
-var menu_m = document.getElementsByClassName('.menu-mobile')
-menu_m = addEventListener('click', activate)
+var mb = document.getElementById('mb')
+mb = addEventListener('click', activate)
 
 var menu = document.getElementById('menu')
 var state = false
