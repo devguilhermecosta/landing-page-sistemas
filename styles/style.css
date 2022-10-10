@@ -171,14 +171,35 @@ main {
     }
 
     .menu {
-        display: inline-block;
-        width: 100vw;
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 100vw;
         height: auto;
+        text-align: right;
         background-color: transparent;
     }
 
-    .menu a {
+    .menu li {
         display: inline-block;
+        margin: 0 15px;
+        transition: all 300ms ease-in-out;
+        border-bottom: 2px solid transparent;
+    }
+
+    .menu li:hover {
+        border-bottom: 2px solid #B1E63C;
+    }
+
+    .menu a {
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .menu a:hover {
+        font-weight: 300;
     }
 
     .title-header {

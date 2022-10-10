@@ -1,6 +1,4 @@
 var mb = document.getElementById('mb')
-mb = addEventListener('click', activate)
-
 var menu = document.getElementById('menu')
 var state = false
 
