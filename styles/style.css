@@ -10,6 +10,9 @@
 body, html {
     font-family: 'Open Sans', sans-serif;
     color: white;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -17,11 +20,22 @@ header {
     background-size: cover;
     background-position: center center;
     height: 90vh;
+    min-height: 420px;
+    padding: 2%;
     max-height: 500px;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .menu-mobile {
     float: right;
+    display: block;
     margin: 10px 2%;
     font-weight: 300;
     cursor: pointer;
@@ -39,6 +53,8 @@ header {
     display: none;
     position: fixed;
     width: 50%;
+    top: 0;
+    left: 0;
     max-width: 200px;
     height: 100vh;
     padding: 10px 0 0 10px;
@@ -68,7 +84,6 @@ header {
 .title-header {
     font-weight: 300;
     font-size: 30px;
-    margin-top: 60px;
     text-align: center;
 }
 
@@ -85,28 +100,19 @@ header {
     margin: 0 auto;
 }
 
-main {
-    background-color: #810EAB;
-    text-align: center;
-    max-height: 380px;
-}
-
 .device {
-    padding: 10px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #810EAB;
 }
 
-.display {
-    display: none;
-}
-
-.image {
-    background-image: url('../images/device.png');
-    background-size: cover;
-    background-position: center center;
-    width: 500px;
-    height: 400px;
-    position: relative;
-    top: -20px;
+.box-device {
+    width: 400px;
+    display: block;
+    padding: 20px;
 }
 
 .title-device {
@@ -117,7 +123,7 @@ main {
 .content-device {
     text-align: center;
     font-size: 14px;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .list-device {
@@ -133,12 +139,26 @@ main {
     content: '* ';
 }
 
+.box-image {
+    display: none;
+    width: 450px;
+    height: 350px;
+}
+
+.image {
+    background-image: url('../images/device.png');
+    background-size: cover;
+    background-position: center center;
+    width: 450px;
+    height: 380px;
+}
+
 .contact {
     background-color: #B1E63C;
     color: black;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
-    padding: 15px;
+    padding: 20px;
     margin-top: 10px;
     border: none;
     border-radius: 30px;
@@ -149,6 +169,30 @@ main {
     background-color: #D1EAB1;
 }
 
+.section-2 {
+    color: black;
+    padding: 0 2%;
+    text-align: center;
+}
+
+.title-sec2 {
+    padding: 2% 0 0 0;
+}
+
+.content-sec2 {
+    padding: 2% 0;
+    max-width: 640px;
+}
+
+.img-sec2 {
+    background-image: url('../images/mockup.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    height: 200px;
+    width: 100%;
+    max-width: 350px;
+}
+
 @media screen and (min-width: 600px) {
     .title-header{
         font-size: 40px;
@@ -156,6 +200,15 @@ main {
 
     .text-header {
         font-size: 16px;
+    }
+
+    .img-sec2 {
+        max-width: 450px;
+        height: 300px;
+    }
+
+    .contact {
+        font-size: 20px;
     }
 }
 
@@ -182,47 +235,86 @@ main {
 
     .menu li {
         display: inline-block;
+        position: relative;
         margin: 0 15px;
-        transition: all 300ms ease-in-out;
-        border-bottom: 2px solid transparent;
-    }
-
-    .menu li:hover {
-        border-bottom: 2px solid #B1E63C;
     }
 
     .menu a {
         color: white;
         font-weight: 300;
         font-size: 18px;
-        margin: 0 15px;
     }
 
     .menu a:hover {
         font-weight: 300;
     }
 
-    .title-header {
-        max-width: 600px;
-        padding-top: 50px;
-        text-align: left;
+    .menu a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        border-bottom: 3px solid transparent;
+        transition: all 300ms ease-in-out;
     }
 
-    .device {
-        display: inline-block;
-        position: relative;
-        top: -160px;
-        left: 35px;
-        width: 300px;
+    .menu a:hover::after {
+        left: 0;
+        width: 100%;
+        border-bottom: 3px solid #B1E63C;
+    }
+
+    .title-header {
+        max-width: 600px;
+        padding-left: 190px;
+        text-align: left;
+        font-size: 60px;
+        width: 900px;
+        max-width: 900px;
+    }
+
+    .box-t-header {
+        width: 100%;
+        max-width: 100%;
+        text-align: right;
+    }
+
+    .text-header {
+        width: 500px;
+        max-width: 500px;
+        margin-right: 18%;
     }
 
     .title-device {
         font-size: 30px;
-        width: 470px;
-        margin-left: -50px;
+        position: relative;
+        left: 60px;
     }
 
-    .display {
-        display: inline-block;
+    .content-device, .list-device {
+        position: relative;
+        left: 60px;
+    }
+
+    .img-sec2 {
+        max-width: 600px;
+        height: 450px;
+    }
+
+    .box-image {
+        display: block;
+    }
+
+    .image {
+        position: relative;
+        top: -30px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .text-header {
+        margin-right: 22%;
     }
 }
