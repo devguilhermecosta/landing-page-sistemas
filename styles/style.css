@@ -191,7 +191,106 @@ header {
     height: 200px;
     width: 100%;
     max-width: 350px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.31);
 }
+
+.section-3 {
+    color: black;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team {
+    background-color: #845EA9;
+    text-align: center;
+}
+
+.team h2 {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    padding: 10px 0 0 0;
+}
+
+.team div {
+    width: 100%;
+    max-width: 350px;
+}
+
+.team p {
+    color: white;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.box-author-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.author-name p:nth-of-type(1) {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+}
+
+.author-name p:nth-of-type(2) {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.box-author-img {
+    padding: 5px;
+}
+
+.author-img {
+    width: 65px;
+    height: 65px;
+    background-image: url('../images/profile.jpg');
+    background-size: 100%;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+.author-content div {
+    width: 100%;
+    max-width: 300px;
+}
+
+.author-content div p {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.bullets span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.bullets span:nth-of-type(1) {
+    background-color: #000000;
+}
+
 
 @media screen and (min-width: 600px) {
     .title-header{
@@ -209,6 +308,25 @@ header {
 
     .contact {
         font-size: 20px;
+    }
+
+    .box-sec2 {
+        padding-top: 40px;
+        margin-bottom: -40px;
+    }
+
+    .img-sec2 {
+        position: relative;
+        top: 80px;
+    }
+
+    .section-3 {
+        flex-direction: row;
+    }
+
+    .team, .author {
+        width: 50%;
+        padding-top: 85px;
     }
 }
 
@@ -298,7 +416,7 @@ header {
     }
 
     .img-sec2 {
-        max-width: 600px;
+        max-width: 900px;
         height: 450px;
     }
 
@@ -311,6 +429,13 @@ header {
         top: -30px;
     }
 
+    .team {
+        padding-left: 200px;
+    }
+
+    .author {
+        padding-right: 200px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
