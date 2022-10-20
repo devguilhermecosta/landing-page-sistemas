@@ -18,8 +18,8 @@ function activate() {
 function fechar() {
     var altura = window.innerWidth
     if (altura < 992) {
-        menu.style.display = "none";
-        mb.style.backgroundImage = "url(../images/menu.png)";
+        menu.style.display = "none"
+        mb.style.backgroundImage = "url(../images/menu.png)"
         state = false
     }
 }
