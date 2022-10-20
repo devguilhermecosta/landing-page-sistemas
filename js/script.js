@@ -5,10 +5,12 @@ var state = false
 
 function activate() {
     if (state == false) {
-        menu.style.display = "inline-block"
+        menu.style.display = "inline-block";
+        mb.style.backgroundImage = "url(../images/close.png)"
         state = true
     } else if (state == true) {
         menu.style.display = "none"
+        mb.style.backgroundImage = "url(../images/menu.png)"
         state = false
     }
 }
@@ -16,6 +18,7 @@ function activate() {
 function fechar() {
     if (state == true) {
         menu.style.display = "none"
+        mb.style.backgroundImage = "url(../images/menu.png)"
         state = false
     }
 }
