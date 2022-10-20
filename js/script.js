@@ -17,7 +17,7 @@ function activate() {
 
 function fechar() {
     var altura = window.innerWidth
-    if (altura < 992) {
+    if (altura < 992 && state == true) {
         menu.style.display = "none"
         mb.style.backgroundImage = "url(../images/menu.png)"
         state = false
