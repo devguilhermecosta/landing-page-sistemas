@@ -16,9 +16,10 @@ function activate() {
 }
 
 function fechar() {
-    if (state == true) {
-        menu.style.display = "none"
-        mb.style.backgroundImage = "url(../images/menu.png)"
+    var altura = window.innerWidth
+    if (altura < 992) {
+        menu.style.display = "none";
+        mb.style.backgroundImage = "url(../images/menu.png)";
         state = false
     }
 }
