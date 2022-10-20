@@ -11,15 +11,15 @@
     <!-- header -->
     <header>
         <!-- input for active menu mobile -->
-        <input class="menu-mobile" id="mb" type="button" value="" onclick="activate()">
+        <input class="menu-mobile" id="mb" type="button" value="">
 
         <!-- menu -->
-        <div class="menu" id="menu">
+        <div onclick="fechar()" class="menu" id="menu">
             <nav>
                 <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a onclick="fechar()" href="#">Sobre</a></li>
+                    <li><a onclick="fechar()" href="#">Produtos</a></li>
+                    <li><a onclick="fechar()" href="#">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -142,6 +142,12 @@
 
     <!-- footer -->
     <footer>
+        <div>
+            <p>contato@contato.com.br</p>
+        </div>
+        <div>
+            <p>Todos os direitos reservados</p>
+        </div>
 
     </footer>
     
