@@ -36,6 +36,7 @@ header {
 .menu-mobile {
     float: right;
     display: block;
+    position: sticky;
     margin: 10px 2%;
     font-weight: 300;
     cursor: pointer;
@@ -47,14 +48,16 @@ header {
     border: none;
     width: 35px;
     height: 35px;
+    z-index: 1;
 }
 
 .menu {
     display: none;
     position: fixed;
-    width: 90%;
+    width: 100%;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 
 .menu nav {
