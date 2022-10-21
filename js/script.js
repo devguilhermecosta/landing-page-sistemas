@@ -1,14 +1,18 @@
 var mb = document.getElementById('mb')
 var menu = document.getElementById('menu')
-var state = false
+var check = false
 
 function activate() {
-
-    if (state == false) {
-        menu.style.display = "inline-block"
-        state = true
-    } else if (state == true) {
+    if (check === false) {
+        menu.style.display = "block"
+        check = true
+    } else {
         menu.style.display = "none"
-        state = false
+        check = false
     }
+}
+
+function to_quit() {
+    menu.style.display = "none"
+    check = false
 }

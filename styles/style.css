@@ -52,7 +52,7 @@ header {
 .menu {
     display: none;
     position: fixed;
-    width: 50%;
+    width: 100%;
     top: 0;
     left: 0;
     max-width: 200px;
