@@ -1,10 +1,8 @@
-var mb = document.getElementById('mb')
-mb.addEventListener("click", activate)
+var mb = document.getElementById('mb').addEventListener("click", activate)
 var menu = document.getElementById('menu')
 var state = false
 
 function activate() {
-
     if (state == false) {
         menu.style.display = "inline-block"
         state = true
@@ -12,4 +10,9 @@ function activate() {
         menu.style.display = "none"
         state = false
     }
+}
+
+function to_quit() {
+    menu.style.display = "none"
+    state = false
 }
