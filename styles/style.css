@@ -33,35 +33,26 @@ header {
     height: 100%;
 }
 
-.menu-mobile {
+#mb {
     float: right;
     display: block;
     position: sticky;
     margin: 10px 2%;
-    font-weight: 300;
-    cursor: pointer;
-    background-image: url('../images/menu.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
     border: none;
     width: 35px;
     height: 35px;
-    z-index: 100;
+    cursor: pointer;
 }
 
 .menu {
     display: none;
     position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    width: 75%;
+    inset: 0;
 }
 
 .menu nav {
     width: 50%;
-    z-index: 1;
     opacity: 0.8;
     max-width: 200px;
     height: 100vh;
@@ -481,7 +472,7 @@ footer div:nth-of-type(2) {
 }
 
 @media screen and (min-width: 992px) {
-    .menu-mobile {
+    #mb {
         display: none;
     }
 
