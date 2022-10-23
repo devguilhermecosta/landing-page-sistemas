@@ -44,6 +44,10 @@ header {
     cursor: pointer;
 }
 
+#mb:focus {
+    background-color: transparent;
+}
+
 .menu {
     display: none;
     position: fixed;
